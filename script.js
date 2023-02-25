@@ -10,7 +10,7 @@ btn.addEventListener("click", () => {
     toneArm.classList.add("play");
     setTimeout(() => {
       song.play();
-    }, 1000);
+    }, 100000);
   } else {
     record.classList.remove("on");
     toneArm.classList.remove("play");

@@ -11,7 +11,7 @@
 body {
 	margin: 0;
 	--color-text: #000;
-	--color-bg: #D5D7CE;
+	--color-bg: #d5d7cec2;
 	--color-link: #000;
 	--color-link-hover: #000;
 	--color-menuItem-hover: #e63811;
@@ -25,34 +25,7 @@ body {
     --cursor-stroke-width: 1px;
 }
 
-/* Page Loader */
-.js .loading::before,
-.js .loading::after {
-	content: '';
-	position: fixed;
-	z-index: 1000;
-}
 
-.js .loading::before {
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: var(--color-bg);
-}
-
-.js .loading::after {
-	top: 50%;
-	left: 50%;
-	width: 60px;
-	height: 60px;
-	margin: -30px 0 0 -30px;
-	border-radius: 50%;
-	opacity: 0.4;
-	background: var(--color-link);
-	animation: loaderAnim 0.7s linear infinite alternate forwards;
-
-}
 
 @keyframes loaderAnim {
 	to {
@@ -426,22 +399,28 @@ main {
 	}
 }
 
-@media (any-pointer: fine) {
-	.cursor {
-		position: fixed;
-		top: 0;
-		left: 0;
-		display: block;
-		pointer-events: none;
-		z-index: 9999;
-	}
-	.cursor__inner {
-		fill: var(--cursor-fill);
-		stroke: var(--cursor-stroke);
-		stroke-width: var(--cursor-stroke-width);
-		opacity: 1;
-	}
-	.no-js .cursor {
-		display: none;
-	}
-}
+
+
+#fifties::before {
+		content: "";
+		position: absolute;
+		margin-left: -200px;
+		margin-top: -200px;
+		width: 150%;
+		height: 150%;
+		opacity: 0.5; /* Aquí puedes ajustar la opacidad deseada */
+		background-image: url("../dist/50s.jpg");
+		background-size: cover;
+	  }
+
+	  #sixties::before {
+		content: "";
+		position: absolute;
+		margin-left: -200px;
+		margin-top: -200px;
+		width: 150%;
+		height: 150%;
+		opacity: 0.5; /* Aquí puedes ajustar la opacidad deseada */
+		background-image: url("../dist/cuadros.jpg");
+		background-size: cover;
+	  }
